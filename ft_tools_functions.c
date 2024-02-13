@@ -3,30 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tools_functions.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbongout <dbongout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 22:01:43 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/07 12:53:46 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:13:32 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static void	ft_putchar(const char c)
+int	ft_printchar(int c)
 {
-	write(1, &c, 1);
-}
+	ssize_t	check_write;
 
-static void	ft_putstr(char *str)
-{
-	if (!str)
-		return ;
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	check_write = write(1, &c, 1);
+	if (check_write == -1)
+		return (-1);
+	return (1);
 }
 
 int	ft_printstr(char *str)
@@ -36,12 +30,11 @@ int	ft_printstr(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		ft_putstr("(null)");
-		return (6);
+		ft_printstr("(null)");
 	}
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		ft_printchar(str[i]);
 		i++;
 	}
 	return (i);

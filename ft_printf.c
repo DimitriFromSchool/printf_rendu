@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbongout <dbongout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:32:53 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/11 09:48:28 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:09:23 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static int	ft_printchar(int c)
-{
-	ssize_t	check_write;
-
-	check_write = write(1, &c, 1);
-	if (check_write == -1)
-		return (-1);
-	return (1);
-}
 
 static int	ft_formats(va_list args, const char format)
 {

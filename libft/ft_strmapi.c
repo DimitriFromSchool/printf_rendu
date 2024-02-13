@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 20:30:50 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:10:07 by dbongout         ###   ########.fr       */
+/*   Created: 2023/11/15 15:57:47 by dbongout          #+#    #+#             */
+/*   Updated: 2023/12/07 13:42:51 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	len;
+	unsigned int	i;
+	char			*dest;
 
-int	ft_printf(const char *str, ...);
-int	ft_print_ptr(unsigned long long ptr);
-int	ft_print_unsigned(unsigned int n);
-int	ft_print_hex(unsigned int num, const char format);
-int	ft_printnbr(int n);
-int	ft_printstr(char *str);
-int	ft_printchar(int c);
-
-#endif
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	i = 0;
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		dest[i] = f(i, s[i]);
+		i++;
+	}
+	dest[len] = '\0';
+	return (dest);
+}

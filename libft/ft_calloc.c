@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 20:30:50 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:10:07 by dbongout         ###   ########.fr       */
+/*   Created: 2023/11/03 12:11:43 by dbongout          #+#    #+#             */
+/*   Updated: 2023/12/06 16:05:42 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
+void	*ft_calloc( size_t count, size_t size )
+{
+	unsigned char	*memory;
+	size_t			i;
 
-int	ft_printf(const char *str, ...);
-int	ft_print_ptr(unsigned long long ptr);
-int	ft_print_unsigned(unsigned int n);
-int	ft_print_hex(unsigned int num, const char format);
-int	ft_printnbr(int n);
-int	ft_printstr(char *str);
-int	ft_printchar(int c);
-
-#endif
+	i = 0;
+	memory = malloc(count * size);
+	if (memory == NULL)
+		return (NULL);
+	while (i < count * size)
+	{
+		memory[i] = 0;
+		i++;
+	}
+	return (memory);
+}

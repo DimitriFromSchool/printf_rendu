@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbongout <dbongout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:03:01 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/07 12:55:30 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:15:42 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_print_unsigned(unsigned int n)
 
 	print_length = 0;
 	if (n == 0)
-		print_length += write(1, "0", 1);
+		print_length += ft_printchar('0');
 	else
 	{
 		num = ft_uitoa(n);
