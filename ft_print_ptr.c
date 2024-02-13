@@ -6,7 +6,7 @@
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:00:43 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:22:53 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:07:57 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ static int	ft_ptr_len(unsigned long long num)
 	return (len);
 }
 
-static void	ft_put_ptr(unsigned long long num)
+static void	ft_convert_ptr(unsigned long long num)
 {
 	if (num >= 16)
 	{
-		ft_put_ptr(num / 16);
-		ft_put_ptr(num % 16);
+		ft_convert_ptr(num / 16);
+		ft_convert_ptr(num % 16);
 	}
 	else
 	{
@@ -52,7 +52,7 @@ int	ft_print_ptr(unsigned long long ptr)
 		return (print_length += ft_printstr("(nil)"));
 	}
 	print_length += ft_printstr("0x");
-	ft_put_ptr(ptr);
+	ft_convert_ptr(ptr);
 	print_length += ft_ptr_len(ptr);
 	return (print_length);
 }
