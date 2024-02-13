@@ -6,7 +6,7 @@
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:00:43 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:21:20 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:22:53 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static void	ft_put_ptr(unsigned long long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_printchar((num + '0'));
 		else
-			ft_putchar_fd((num - 10 + 'a'), 1);
+			ft_printchar((num - 10 + 'a'));
 	}
 }
 
