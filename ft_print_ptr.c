@@ -6,7 +6,7 @@
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:00:43 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/05 20:34:29 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:21:20 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int	ft_print_ptr(unsigned long long ptr)
 	print_length = 0;
 	if (ptr == 0)
 	{
-		return (print_length += write(1, "(nil)", 5));
+		return (print_length += ft_printstr("(nil)"));
 	}
-	print_length += write(1, "0x", 2);
+	print_length += ft_printstr("0x");
 	ft_put_ptr(ptr);
 	print_length += ft_ptr_len(ptr);
 	return (print_length);
