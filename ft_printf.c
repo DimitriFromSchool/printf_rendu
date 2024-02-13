@@ -6,7 +6,7 @@
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:32:53 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:09:23 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:33:40 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_formats(va_list args, const char format)
 	else if (format == 's')
 		print_length += ft_printstr(va_arg(args, char *));
 	else if (format == 'p')
-		print_length += ft_print_ptr(va_arg(args, unsigned long long));
+		print_length += ft_print_ptr(va_arg(args,void *));
 	else if (format == 'd' || format == 'i')
 		print_length += ft_printnbr(va_arg(args, int));
 	else if (format == 'u')

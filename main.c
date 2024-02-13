@@ -81,7 +81,7 @@ int main()
     printf("%sTest 4 :%s ", BLUE, RESET);
     int res4 = printf("%s\n", "Hello, World!");
 
-    printf("%sTest 5 :%sv", BLUE, RESET);
+    printf("%sTest 5 :%s ", BLUE, RESET);
     int res5 = printf("%p\n", (void *)1234);
 
     printf("%sTest 6 :%s ", BLUE, RESET);
