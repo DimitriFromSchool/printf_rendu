@@ -6,7 +6,7 @@
 /*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:09:54 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/13 18:18:49 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:27:58 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	ft_convert_hex(unsigned int num, const char format)
 int	ft_print_hex(unsigned int num, const char format)
 {
 	if (num == 0)
-		return (write(1, "0", 1));
+		return (ft_printchar('0'));
 	else
 		ft_convert_hex(num, format);
 	return (ft_hex_len(num));
