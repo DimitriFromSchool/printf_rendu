@@ -15,52 +15,52 @@ int main()
     char month[] = "Janvier";
 
     printf("\n");
-    ft_printf("%sRésultat Ft_printf%s\n", PURPT, RESET);
+    ft_printf("%sRésultat Ft_printf%s\n", GREENT, RESET);
     printf("\n");
 
-    ft_printf("%sTest 1 :%s ", PURP, RESET);
+    ft_printf("%sTest 1 :%s ", GREEN, RESET);
     int test1 = ft_printf("%%\n");
 
-    ft_printf("%sTest 2 :%s ", PURP, RESET);
+    ft_printf("%sTest 2 :%s ", GREEN, RESET);
     int test2 = ft_printf("%%z\n");
 
-    ft_printf("%sTest 3 :%s ", PURP, RESET);
+    ft_printf("%sTest 3 :%s ", GREEN, RESET);
     int test3 = ft_printf("%c\n", 'A');
 
-    ft_printf("%sTest 4 :%s ", PURP, RESET);
+    ft_printf("%sTest 4 :%s ", GREEN, RESET);
     int test4 = ft_printf("%s\n", "Hello, World!");
 
-    ft_printf("%sTest 5 :%s ", PURP, RESET);
+    ft_printf("%sTest 5 :%s ", GREEN, RESET);
     int test5 = ft_printf("%p\n", (void *)1234);
 
-    ft_printf("%sTest 6 :%s ", PURP, RESET);
+    ft_printf("%sTest 6 :%s ", GREEN, RESET);
     int test6 = ft_printf("%p\n", (void *)0);
 
-    ft_printf("%sTest 7 :%s ", PURP, RESET);
+    ft_printf("%sTest 7 :%s ", GREEN, RESET);
     int test7 = ft_printf("%p\n", "0");
 
-    ft_printf("%sTest 8 :%s ", PURP, RESET);
+    ft_printf("%sTest 8 :%s ", GREEN, RESET);
     int test8 = ft_printf("%p %p\n", (void *)0, (void *)0);
 
-    ft_printf("%sTest 9 :%s ", PURP, RESET);
+    ft_printf("%sTest 9 :%s ", GREEN, RESET);
     int test9 = ft_printf("Le %d %s de cette année\n", day, month);
 
-    ft_printf("%sTest 10 :%s ", PURP, RESET);
+    ft_printf("%sTest 10 :%s ", GREEN, RESET);
     int test10 = ft_printf("%d\n", 42);
 
-    ft_printf("%sTest 11 :%s ", PURP, RESET);
+    ft_printf("%sTest 11 :%s ", GREEN, RESET);
     int test11 = ft_printf("%i\n", -42);
 
-    ft_printf("%sTest 12 :%s ", PURP, RESET);
+    ft_printf("%sTest 12 :%s ", GREEN, RESET);
     int test12 = ft_printf("%u\n", 1234);
 
-    ft_printf("%sTest 13 :%s ", PURP, RESET);
+    ft_printf("%sTest 13 :%s ", GREEN, RESET);
     int test13 = ft_printf("%u\n", 0);
 
-    ft_printf("%sTest 14 :%s ", PURP, RESET);
+    ft_printf("%sTest 14 :%s ", GREEN, RESET);
     int test14 = ft_printf("%x\n", 255);
 
-    ft_printf("%sTest 15 :%s ", PURP, RESET);
+    ft_printf("%sTest 15 :%s ", GREEN, RESET);
     int test15 = ft_printf("%X\n", 255);
     
     // Resulat vraie fonction
@@ -115,7 +115,7 @@ int main()
     int res15 = printf("%X\n", 255);
 
     printf("\n");
-    printf("%sValeurs retournées :%s\n", GREENT, RESET);
+    printf("%sValeurs retournées :%s\n", PURPT, RESET);
     printf("\n");
 
     printf("Test 1 :\n%sPrintf :%s %d | %sFt_Printf%s : %d\n", BLUE, RESET, test1, GREEN, RESET, res1);
