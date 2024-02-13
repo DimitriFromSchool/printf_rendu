@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbongout <dbongout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbongout <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:09:54 by dbongout          #+#    #+#             */
-/*   Updated: 2024/02/11 09:57:38 by dbongout         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:18:49 by dbongout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ static void	ft_convert_hex(unsigned int num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_printchar(num + '0');
 		else
 		{
 			if (format == 'x')
-				ft_putchar_fd((num - 10 + 'a'), 1);
+				ft_printchar(num - 10 + 'a');
 			if (format == 'X')
-				ft_putchar_fd((num - 10 + 'A'), 1);
+				ft_printchar(num - 10 + 'A');
 		}
 	}
 }
