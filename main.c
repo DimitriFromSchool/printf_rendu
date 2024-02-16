@@ -1,11 +1,11 @@
 
-#define PURP "\e[35m"
-#define GREEN "\e[32m"
-#define BLUE "\e[34m"
-#define RESET "\e[0m"
-#define GREENT "\e[42m"
-#define BLUET "\e[44m"
-#define PURPT "\e[45m"
+#define PURP    "\e[35m"
+#define GREEN   "\e[32m"
+#define BLUE    "\e[34m"
+#define RESET   "\e[0m"
+#define GREENT  "\e[42m"
+#define BLUET   "\e[44m"
+#define PURPT   "\e[45m"
 
 #include "ft_printf.h"
 
@@ -15,7 +15,7 @@ int main()
     char month[] = "Janvier";
 
     printf("\n");
-    ft_printf("%sRésultat Ft_printf%s\n", GREENT, RESET);
+    ft_printf("%sRésultat Ft_printf%s\n", PURPT, RESET);
     printf("\n");
 
     ft_printf("%sTest 1 :%s ", GREEN, RESET);
